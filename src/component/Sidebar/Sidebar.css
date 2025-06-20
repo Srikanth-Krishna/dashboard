@@ -1,0 +1,32 @@
+.sidebar {
+  background-color: blue;
+  width: 250px;
+  height: 90vh;
+  position: fixed;
+  top: 0;
+}
+
+.logo-container {
+  background-color: darkblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-item__container {
+  background-color: green;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 2.5rem;
+}
+
+.sidebar-item li {
+  list-style: none;
+}
+
+.sidebar-item a {
+  text-decoration: none;
+}

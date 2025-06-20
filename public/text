@@ -1,0 +1,37 @@
+<header className='header-dashboard'>
+  <div className='wrap'>
+    <div className='header-left'>
+      <div className='button-show-hide'>
+        <i className='icon-menu-left'></i>
+      </div>
+      <form className='form-search'>
+        <input placeholder='search here..'></input>
+        <div className='button-submit'>
+          <button type='submit'>
+            <i></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div className='header-grid'>
+      <div className='header-item'>
+        <i className='icon-moon'></i>
+      </div>
+      <div className='header-item'>
+        <i className='notification'></i>
+      </div>
+      <div className='header-item'>
+        <i className='message'></i>
+      </div>
+      <div className='header-item'>
+        <i className='apps'></i>
+      </div>
+      <div className='header-item'></div>
+    </div>
+    <img src={userImg} alt='user-image' />
+    <div className='userDetails'>
+      <p className='name'>Srikanth Krishna</p>
+      <p className='role'>Admin</p>
+    </div>
+  </div>
+</header>;

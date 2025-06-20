@@ -1,0 +1,20 @@
+.recent-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 12px;
+}
+
+.recent-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.recent-chartWrap {
+  width: 100%;
+  height: 280px;
+}

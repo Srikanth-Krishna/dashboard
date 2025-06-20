@@ -1,0 +1,24 @@
+.top-products__container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 400px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 12px;
+}
+
+.top-products__header h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.top-products__body li {
+  list-style: none;
+}
+
+.top-products__body ul {
+  padding: 0;
+}

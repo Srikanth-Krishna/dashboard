@@ -1,0 +1,52 @@
+.top-products__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-products__item-body {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.product-img {
+  height: 40px;
+}
+
+.item-title,
+.item-percentage {
+  font-family: 'Poppins';
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.item-qty,
+.item-cost {
+  font-family: 'Poppins';
+  font-size: 1.5vh;
+  font-weight: 300;
+  margin: 0;
+}
+
+.coupon {
+  font-family: 'Poppins';
+  font-size: 0.8em;
+
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.coupon-code {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 1.5vh;
+  margin: 0;
+}
+
+.country-flag {
+  height: 20px;
+}
