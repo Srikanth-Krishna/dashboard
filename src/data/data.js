@@ -5,6 +5,17 @@ import {
   FaUsers,
 } from 'react-icons/fa';
 
+import product1 from '../component/TopProducts/images/product1.png';
+import product2 from '../component/TopProducts/images/product2.png';
+import product3 from '../component/TopProducts/images/product3.png';
+import product4 from '../component/TopProducts/images/product4.png';
+import product5 from '../component/TopProducts/images/product5.png';
+import countryflag from '../component/TopProducts/images/countryflag.png';
+import countryflag2 from '../component/TopProducts/images/countryflag2.png';
+import countryflag3 from '../component/TopProducts/images/countryflag3.png';
+import countryflag4 from '../component/TopProducts/images/countryflag4.png';
+import countryflag5 from '../component/TopProducts/images/countryflag5.png';
+
 export const metrics = [
   {
     title: 'Total Sales',
@@ -45,5 +56,48 @@ export const metrics = [
     color: '#3B82F6',
     id: 'totalVisitors',
     sparklineData: [10, 20, 15, 25, 30, 28, 35],
+  },
+];
+
+export const topProductsData = [
+  {
+    image: product1,
+    title: 'Patimax Fragrance Long...',
+    qty: `${100} items`,
+    countryFlag: countryflag,
+    price: '$24.00',
+    percentage: '-10%',
+  },
+  {
+    image: product2,
+    title: 'Nulo MedalSeries Adult c...',
+    qty: `${100} items`,
+    countryFlag: countryflag2,
+    price: '$24.00',
+    percentage: '-10%',
+  },
+  {
+    image: product3,
+    title: 'Pedigree Puppy Dry Dog...',
+    qty: `${100} items`,
+    countryFlag: countryflag3,
+    price: '$24.00',
+    percentage: '-10%',
+  },
+  {
+    image: product4,
+    title: 'Biscoito Premier Cookie...',
+    qty: `${100} items`,
+    countryFlag: countryflag4,
+    price: '$24.00',
+    percentage: '-10%',
+  },
+  {
+    image: product5,
+    title: 'Pedigree Adult Dry Dog...',
+    qty: `${100} items`,
+    countryFlag: countryflag5,
+    price: '$24.00',
+    percentage: '-10%',
   },
 ];
