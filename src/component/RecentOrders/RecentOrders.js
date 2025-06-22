@@ -80,7 +80,7 @@ function RecentOrders() {
     <div className='recent-card'>
       <h3 className='recent-title'>Recent Orders</h3>
       <div className='recent-chartWrap'>
-        <Line data={data} options={options} />
+        <Line style={{ paddingTop: '20px' }} data={data} options={options} />
       </div>
     </div>
   );
