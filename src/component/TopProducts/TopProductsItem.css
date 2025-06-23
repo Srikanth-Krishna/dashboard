@@ -6,10 +6,6 @@
 }
 
 .top-products__item-body {
-  /* display: grid;
-  grid-template-columns: 180px auto auto auto;
-  align-items: center;
-  gap: 15px; */
   display: flex;
   justify-content: space-between;
   gap: 30px;
