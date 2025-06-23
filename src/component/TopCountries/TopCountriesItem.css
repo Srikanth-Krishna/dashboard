@@ -1,0 +1,32 @@
+.item-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+}
+
+.item-container img {
+  height: 20px;
+}
+
+.item-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.item-body a {
+  text-decoration: none;
+  width: 30px;
+  color: black;
+}
+
+.up {
+  color: green;
+}
+
+.down {
+  color: red;
+}

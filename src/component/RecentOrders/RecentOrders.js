@@ -45,7 +45,7 @@ function RecentOrders() {
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
         tension: 0.4,
         fill: true,
-        pointRadius: 0,
+        pointRadius: 2.2,
         borderWidth: 3,
       },
     ],
@@ -53,6 +53,7 @@ function RecentOrders() {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false,
@@ -80,7 +81,7 @@ function RecentOrders() {
     <div className='recent-card'>
       <h3 className='recent-title'>Recent Orders</h3>
       <div className='recent-chartWrap'>
-        <Line style={{ paddingTop: '20px' }} data={data} options={options} />
+        <Line style={{ height: 'auto' }} data={data} options={options} />
       </div>
     </div>
   );

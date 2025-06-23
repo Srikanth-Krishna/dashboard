@@ -101,3 +101,42 @@ export const topProductsData = [
     percentage: '-10%',
   },
 ];
+
+export const topCountries = [
+  {
+    image: countryflag,
+    country: 'Spain',
+    trend: 'up',
+    totalSales: '6,943',
+  },
+  {
+    image: countryflag2,
+    country: 'India',
+    trend: 'down',
+    totalSales: '6,943',
+  },
+  {
+    image: countryflag3,
+    country: 'England',
+    trend: 'up',
+    totalSales: '6,943',
+  },
+  {
+    image: countryflag4,
+    country: 'Brazil',
+    trend: 'down',
+    totalSales: '6,943',
+  },
+  {
+    image: countryflag5,
+    country: 'Germany',
+    trend: 'up',
+    totalSales: '6,943',
+  },
+  {
+    image: countryflag,
+    country: 'Spain',
+    trend: 'up',
+    totalSales: '6,943',
+  },
+];
