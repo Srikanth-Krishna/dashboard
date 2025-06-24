@@ -140,3 +140,42 @@ export const topCountries = [
     totalSales: '6,943',
   },
 ];
+
+export const comments = [
+  {
+    name: 'Kathryn Murphy',
+    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+    rating: 4,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec dolor vel est interdum',
+  },
+  {
+    name: 'Leslie Alexander',
+    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+    rating: 4,
+    text: 'Cras nec viverra justo, a mattis lacus. Vestibulum eleifend, leo sit amet aliquam laoreet, turpis leo vulputate orci',
+  },
+  {
+    name: 'Devon Lane',
+    avatar: 'https://randomuser.me/api/portraits/women/65.jpg',
+    rating: 4,
+    text: 'Morbi eget commodo diam. Praesent dignissim purus ac turpis porta',
+  },
+  {
+    name: 'Eleanor Pena',
+    avatar: 'https://randomuser.me/api/portraits/men/80.jpg',
+    rating: 4,
+    text: 'This is awesome',
+  },
+  {
+    name: 'Rajath Patidhar',
+    avatar: 'https://randomuser.me/api/portraits/men/82.jpg',
+    rating: 5,
+    text: 'This is Legendary',
+  },
+  {
+    name: 'John Cena',
+    avatar: 'https://randomuser.me/api/portraits/men/81.jpg',
+    rating: 4.5,
+    text: 'This is Lorem Ipsum',
+  },
+];

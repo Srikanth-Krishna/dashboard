@@ -1,3 +1,7 @@
 .home-page {
   display: flex;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

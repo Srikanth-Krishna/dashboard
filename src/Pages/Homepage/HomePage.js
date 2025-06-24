@@ -4,6 +4,7 @@ import { metrics } from '../../data/data';
 import RecentOrders from '../../component/RecentOrders/RecentOrders';
 import TopProducts from '../../component/TopProducts/TopProducts';
 import TopCountries from '../../component/TopCountries/TopCountries';
+import ScrollableComments from '../../component/CommentSection/CommentSection';
 
 export default function HomePage() {
   return (
@@ -36,6 +37,11 @@ export default function HomePage() {
         </Col>
         <Col flex={'auto'}>
           <TopCountries />
+        </Col>
+      </Row>
+      <Row>
+        <Col flex={'auto'}>
+          <ScrollableComments />
         </Col>
       </Row>
     </>

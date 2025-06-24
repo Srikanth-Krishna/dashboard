@@ -2,30 +2,35 @@ import { FaHome, FaUser } from 'react-icons/fa';
 import { FaCartShopping } from 'react-icons/fa6';
 
 import { CgFileAdd } from 'react-icons/cg';
-
 export const sidebarData = [
   {
-    key: '1',
-    path: '/',
+    key: '/',
     icon: <FaHome />,
     label: 'Homepage',
   },
   {
-    key: '2',
+    key: 'products',
     label: 'Products',
-    path: '/products',
     icon: <FaCartShopping />,
+    children: [
+      {
+        key: '/products/add',
+        label: 'Add Product',
+      },
+      {
+        key: '/products/list',
+        label: 'Product List',
+      },
+    ],
   },
   {
-    key: '3',
+    key: '/orders',
     label: 'Orders',
-    path: '/orders',
     icon: <CgFileAdd />,
   },
   {
-    key: '4',
+    key: '/users',
     label: 'Users',
-    path: '/users',
     icon: <FaUser />,
   },
 ];
