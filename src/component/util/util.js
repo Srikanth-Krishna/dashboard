@@ -1,3 +1,4 @@
+// Convert hex code to RGBA
 export const convertHexToRGBA = (hexCode, opacity = 1) => {
   let hex = hexCode.replace('#', '');
 
@@ -16,3 +17,21 @@ export const convertHexToRGBA = (hexCode, opacity = 1) => {
 
   return `rgba(${r},${g},${b},${opacity})`;
 };
+
+// Function to fetch dummy products
+export async function fetchProducts() {
+  const respone = await fetch('https://dummyjson.com/products');
+  const data = await respone.json();
+  const productList = data.products.map((product) => {
+    return {
+      image: product.thumbnail,
+      name: product.title,
+      id: Math.random().toString().slice(2, 11),
+      price: product.price,
+      quantity: product.stock,
+      sale: Math.round(Math.random() * 10),
+      stock: Math.random() < 0.5 ? false : true,
+    };
+  });
+  return productList;
+}

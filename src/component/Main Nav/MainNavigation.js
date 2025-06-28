@@ -28,7 +28,7 @@ export default function MainNavigation({ collapsed, setCollapsed }) {
 
         <div className='search-box'>
           <FaSearch className='search-icon' />
-          <input type='text' placeholder='Search here…' />
+          <input name='overallSearch' type='text' placeholder='Search here…' />
         </div>
       </div>
 

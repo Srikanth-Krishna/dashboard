@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Card, Col, DatePicker, Form, Input, Row, Select } from 'antd';
 import ImageUploader from '../../component/common/Uploader/Uploader';
 
-const tinyTextStyle = { fontSize: 10, fontWeight: 400, color: 'grey' };
+// const tinyTextStyle = { fontSize: 10, fontWeight: 400, color: 'grey' };
 
 export default function AddProductsPage() {
   const onFinish = (values) => {
@@ -97,12 +97,12 @@ export default function AddProductsPage() {
             <Card style={{ minHeight: 550 }}>
               <Form.Item label='Upload Images' name='imageUploader'>
                 <ImageUploader />
-                <p style={tinyTextStyle}>
+                {/* <p style={tinyTextStyle}>
                   You need to add at least 4 images. Pay attention to the
                   quality of the pictures you add, comply with the background
                   color standards. Pictures must be in certain dimensions.
                   Notice that the product shows all the details.
-                </p>
+                </p> */}
               </Form.Item>
               <div
                 style={{
@@ -140,7 +140,7 @@ export default function AddProductsPage() {
                   paddingTop: 150,
                 }}
               >
-                <Form.Item label={null}>
+                <Form.Item label={null} name='button'>
                   <Button type='primary' htmlType='submit' block>
                     Add Product
                   </Button>

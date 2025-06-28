@@ -23,7 +23,7 @@ export default function Sidebar({ collapsed }) {
         width={250}
         style={{
           backgroundColor: 'white',
-          height: '100vh',
+          height: 'auto',
           fontWeight: 500,
         }}
       >
