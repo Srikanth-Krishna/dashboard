@@ -21,6 +21,10 @@ export const sidebarData = [
         key: '/products/list',
         label: 'Product List',
       },
+      {
+        key: '/products/details',
+        label: 'Product Details',
+      },
     ],
   },
   {
