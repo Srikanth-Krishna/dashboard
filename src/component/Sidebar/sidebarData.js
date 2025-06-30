@@ -31,6 +31,16 @@ export const sidebarData = [
     key: '/orders',
     label: 'Orders',
     icon: <CgFileAdd />,
+    children: [
+      {
+        key: '/orders/list',
+        label: 'Orders List',
+      },
+      {
+        key: '/orders/details',
+        label: 'Order Details',
+      },
+    ],
   },
   {
     key: '/users',
