@@ -1,5 +1,14 @@
 import React from 'react';
-import { Row, Col, Card, Typography, Button, Divider, Space } from 'antd';
+import {
+  Row,
+  Col,
+  Card,
+  Typography,
+  Button,
+  Divider,
+  Space,
+  message,
+} from 'antd';
 
 const { Title, Text } = Typography;
 
@@ -180,7 +189,12 @@ const OrderDetailPage = () => {
               <Text strong style={{ color: 'green' }}>
                 {order.deliveryDate}
               </Text>
-              <Button type='primary'>Track order</Button>
+              <Button
+                type='primary'
+                onClick={() => message.info(`Tracking order: ${order.orderId}`)}
+              >
+                Track order
+              </Button>
             </Row>
           </Card>
         </Col>
