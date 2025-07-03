@@ -59,7 +59,12 @@ export const columns = [
     render: (_, record) => (
       <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
         <Image src={record.image} alt={record.name} width={40} height={40} />
-        <span style={{ maxWidth: 200 }}>{record.name}</span>
+        <span
+          onClick={() => message.info(`Viewing ${record.name}`)}
+          style={{ maxWidth: 200, cursor: 'pointer' }}
+        >
+          {record.name}
+        </span>
       </div>
     ),
   },
