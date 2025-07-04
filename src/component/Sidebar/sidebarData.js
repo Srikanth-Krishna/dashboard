@@ -46,5 +46,10 @@ export const sidebarData = [
     key: '/users',
     label: 'Users',
     icon: <FaUser />,
+    children: [
+      { key: '/users/add-user', label: 'Add New User' },
+      { key: '/users/all-users', label: 'All Users' },
+      { key: '/users/login', label: 'Login' },
+    ],
   },
 ];
