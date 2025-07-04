@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Row,
-  Col,
-  Card,
-  Typography,
-  Button,
-  Divider,
-  Space,
-  message,
-} from 'antd';
+import { Row, Col, Card, Typography, Button, Divider, message } from 'antd';
 
 const { Title, Text } = Typography;
 
