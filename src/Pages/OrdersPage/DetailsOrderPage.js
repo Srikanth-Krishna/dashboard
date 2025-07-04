@@ -78,7 +78,7 @@ const OrderDetailPage = () => {
                     flexDirection: 'column',
                   }}
                 >
-                  <Text style={{ color: 'gray', fontSize: 11 }}>
+                  <Text style={{ color: 'gray', fontSize: 11, width: 100 }}>
                     Product name
                   </Text>
                   <Text>{item.name}</Text>
