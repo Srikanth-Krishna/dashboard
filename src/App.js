@@ -37,11 +37,11 @@ const router = createBrowserRouter([
         children: [
           { path: '/users/add-user', element: <AddNewUserPage /> },
           { path: '/users/all-users', element: <AllUsersPage /> },
-          { path: '/users/login', element: <LoginUser /> },
         ],
       },
     ],
   },
+  { path: '/users/login', element: <LoginUser /> },
 ]);
 
 function App() {

@@ -9,7 +9,7 @@ import {
 import './MainNavigation.css';
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 import { Header } from 'antd/es/layout/layout';
-import { Button } from 'antd';
+import { Avatar, Badge, Button } from 'antd';
 
 export default function MainNavigation({ collapsed, setCollapsed }) {
   return (
@@ -38,13 +38,26 @@ export default function MainNavigation({ collapsed, setCollapsed }) {
         </button>
 
         <button className='circle-btn badge'>
-          <FaBell />
-          <span className='badge-count'>1</span>
+          {/* <span className='badge-count'>1</span> */}
+          <Badge count={3} size='small'>
+            <Avatar
+              style={{ backgroundColor: '#f3f4f6', color: 'black' }}
+              size='default'
+              icon={<FaBell />}
+            ></Avatar>
+          </Badge>
         </button>
 
-        <button className='circle-btn badge blue'>
-          <FaRegCommentDots />
-          <span className='badge-count'>1</span>
+        <button className='circle-btn badge '>
+          <Badge count={3} size='small'>
+            <Avatar
+              style={{ backgroundColor: '#f3f4f6', color: 'black' }}
+              size='default'
+              icon={<FaRegCommentDots />}
+            ></Avatar>
+          </Badge>
+
+          {/* <span className='badge-count'>1</span> */}
         </button>
 
         <button className='circle-btn'>

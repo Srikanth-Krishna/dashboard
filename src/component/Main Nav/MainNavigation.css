@@ -27,12 +27,14 @@
 /* ─── Search box ───────────────────── */
 .search-box {
   position: relative;
-  width: 300px;
+
+  width: 350px;
   max-width: 35vw;
 }
 
 .search-box input {
   width: 100%;
+
   padding: 0.7rem 0.7rem 0.7rem 1rem;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
