@@ -4,6 +4,8 @@ import Sidebar from '../component/Sidebar/Sidebar';
 import { ConfigProvider, Layout, theme } from 'antd';
 import { useState } from 'react';
 
+const { Footer } = Layout;
+
 export default function RootLayout() {
   const [collapsed, setCollapsed] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -25,6 +27,9 @@ export default function RootLayout() {
               setCollapsed={setCollapsed}
             />
             <Outlet />
+            <Footer style={{ textAlign: 'center' }}>
+              Dashboard ©{new Date().getFullYear()} Created by Srikanth Krishna
+            </Footer>
           </Layout>
         </Layout>
       </ConfigProvider>
