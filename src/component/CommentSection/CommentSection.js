@@ -8,11 +8,7 @@ const ScrollableComments = () => {
   return (
     <Card
       title={<Title level={4}>New Comments</Title>}
-      extra={
-        <Button type='text' strong>
-          •••
-        </Button>
-      }
+      extra={<Button type='text'>•••</Button>}
       style={{ height: '100%', borderRadius: 12, marginLeft: 12 }}
     >
       <div

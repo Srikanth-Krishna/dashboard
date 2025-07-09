@@ -158,12 +158,12 @@ export default function MainNavigation({
                 src='https://randomuser.me/api/portraits/women/65.jpg'
                 size='large'
               />
-              <div style={{ lineHeight: 1.2 }}>
+              <div style={{ lineHeight: 0 }}>
                 <Text
                   strong
                   style={{ display: 'block', color: token.colorText }}
                 >
-                  Kristin Watson
+                  Srikanth Krishna
                 </Text>
                 <Text type='secondary' style={{ fontSize: 12 }}>
                   Admin
