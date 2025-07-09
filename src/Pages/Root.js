@@ -1,21 +1,33 @@
 import { Outlet } from 'react-router-dom';
 import MainNavigation from '../component/Main Nav/MainNavigation';
 import Sidebar from '../component/Sidebar/Sidebar';
-import { Layout } from 'antd';
+import { ConfigProvider, Layout, theme } from 'antd';
 import { useState } from 'react';
 
 export default function RootLayout() {
   const [collapsed, setCollapsed] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <>
-      <Layout>
-        <Sidebar collapsed={collapsed} />
+      <ConfigProvider
+        theme={{
+          algorithm: darkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
+        }}
+      >
         <Layout>
-          <MainNavigation collapsed={collapsed} setCollapsed={setCollapsed} />
-          <Outlet />
+          <Sidebar collapsed={collapsed} />
+          <Layout>
+            <MainNavigation
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+              collapsed={collapsed}
+              setCollapsed={setCollapsed}
+            />
+            <Outlet />
+          </Layout>
         </Layout>
-      </Layout>
+      </ConfigProvider>
     </>
   );
 }

@@ -1,13 +1,4 @@
 import {
-  FaSearch,
-  FaRegMoon,
-  FaBell,
-  FaRegCommentDots,
-  FaQrcode,
-  FaThLarge,
-} from 'react-icons/fa';
-import './MainNavigation.css';
-import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   SettingOutlined,
@@ -15,12 +6,34 @@ import {
   InboxOutlined,
   MoneyCollectOutlined,
   LogoutOutlined,
+  BulbFilled,
+  BulbOutlined,
+  SearchOutlined,
+  MessageOutlined,
+  BellOutlined,
+  AppstoreOutlined,
 } from '@ant-design/icons';
-import { Header } from 'antd/es/layout/layout';
-import { Avatar, Badge, Button, Dropdown } from 'antd';
+import {
+  Avatar,
+  Badge,
+  Button,
+  Dropdown,
+  Input,
+  Space,
+  theme,
+  Typography,
+} from 'antd';
 import { Link } from 'react-router-dom';
 
-export default function MainNavigation({ collapsed, setCollapsed }) {
+const { Text } = Typography;
+
+export default function MainNavigation({
+  collapsed,
+  setCollapsed,
+  darkMode,
+  setDarkMode,
+}) {
+  const token = theme.useToken();
   const items = [
     {
       key: '1',
@@ -51,79 +64,108 @@ export default function MainNavigation({ collapsed, setCollapsed }) {
   ];
 
   return (
-    <Header className='app-header'>
-      <div className='header-left'>
-        <Button
-          type='text'
-          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          onClick={() => setCollapsed(!collapsed)}
-          style={{
-            fontSize: '16px',
-            width: 64,
-            height: 64,
-          }}
-        />
+    <>
+      <div
+        style={{
+          background: token.colorBgContainer,
+          padding: '0 24px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          height: 64,
+          boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+        }}
+      >
+        <Space size='large'>
+          <Button
+            type='text'
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setCollapsed(!collapsed)}
+            style={{
+              fontSize: 16,
+              cursor: 'pointer',
+              color: token.colorText,
+            }}
+          />
 
-        <div className='search-box'>
-          <FaSearch className='search-icon' />
-          <input name='overallSearch' type='text' placeholder='Search here…' />
-        </div>
-      </div>
+          <Input
+            placeholder='Search here...'
+            suffix={<SearchOutlined />}
+            style={{
+              width: 300,
+              borderRadius: 6,
+              backgroundColor: token.colorBgElevated,
+              color: token.colorText,
+            }}
+          />
+        </Space>
 
-      <div className='header-right'>
-        <button className='circle-btn'>
-          <Avatar
-            style={{ backgroundColor: '#f3f4f6', color: 'black' }}
-            size='default'
-            icon={<FaRegMoon />}
-          ></Avatar>
-        </button>
+        <Space size='middle' align='center'>
+          <Button
+            shape='circle'
+            icon={darkMode ? <BulbFilled /> : <BulbOutlined />}
+            onClick={() => setDarkMode(!darkMode)}
+            style={{
+              background: token.colorBgElevated,
+              border: 'none',
+              color: token.colorText,
+            }}
+          />
 
-        <button className='circle-btn badge'>
-          {/* <span className='badge-count'>1</span> */}
-          <Badge count={3} size='small'>
-            <Avatar
-              style={{ backgroundColor: '#f3f4f6', color: 'black' }}
-              size='default'
-              icon={<FaBell />}
-            ></Avatar>
-          </Badge>
-        </button>
-
-        <button className='circle-btn badge '>
-          <Badge count={3} size='small'>
-            <Avatar
-              style={{ backgroundColor: '#f3f4f6', color: 'black' }}
-              size='default'
-              icon={<FaRegCommentDots />}
-            ></Avatar>
-          </Badge>
-          {/* <span className='badge-count'>1</span> */}
-        </button>
-
-        <button className='circle-btn'>
-          <FaQrcode />
-        </button>
-
-        <button className='circle-btn'>
-          <FaThLarge />
-        </button>
-
-        <Dropdown menu={{ items }} trigger={['click']}>
-          <div className='profile'>
-            <img
-              src='https://i.pravatar.cc/40?img=5'
-              alt='Kristin Watson'
-              className='avatar'
+          <Badge count={3} size='small' offset={[-2, 2]}>
+            <Button
+              shape='circle'
+              icon={<BellOutlined />}
+              style={{
+                background: token.colorBgElevated,
+                border: 'none',
+                color: token.colorText,
+              }}
             />
+          </Badge>
 
-            <div className='profile-info'>
-              <span className='name'>Kristin Watson</span>
-              <small className='role'>Admin</small>
-            </div>
-          </div>
-        </Dropdown>
+          <Badge count={3} size='small' offset={[-2, 2]}>
+            <Button
+              shape='circle'
+              icon={<MessageOutlined />}
+              style={{
+                background: token.colorBgElevated,
+                border: 'none',
+                color: token.colorText,
+              }}
+            />
+          </Badge>
+
+          <Button
+            shape='circle'
+            icon={<AppstoreOutlined />}
+            style={{
+              background: token.colorBgElevated,
+              border: 'none',
+              color: token.colorText,
+            }}
+          />
+          <Dropdown menu={{ items }} trigger={['click']}>
+            <Space>
+              <Avatar
+                src='https://randomuser.me/api/portraits/women/65.jpg'
+                size='large'
+              />
+              <div style={{ lineHeight: 1.2 }}>
+                <Text
+                  strong
+                  style={{ display: 'block', color: token.colorText }}
+                >
+                  Kristin Watson
+                </Text>
+                <Text type='secondary' style={{ fontSize: 12 }}>
+                  Admin
+                </Text>
+              </div>
+            </Space>
+          </Dropdown>
+        </Space>
       </div>
-    </Header>
+    </>
   );
 }
