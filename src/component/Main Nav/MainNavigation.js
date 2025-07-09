@@ -67,13 +67,15 @@ export default function MainNavigation({
     <>
       <div
         style={{
-          background: token.colorBgContainer,
+          backgroundColor: darkMode ? '#000000' : '#ffffff',
           padding: '0 24px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           height: 64,
-          boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+          boxShadow: darkMode
+            ? '0 1px 4px rgba(255, 255, 255, 0.15)'
+            : '0 1px 4px rgba(0,0,0,0.06)',
         }}
       >
         <Space size='large'>
@@ -109,6 +111,7 @@ export default function MainNavigation({
               background: token.colorBgElevated,
               border: 'none',
               color: token.colorText,
+              boxShadow: '0px 0px 3px 3px rgba(0,0,0,0.06)',
             }}
           />
 
@@ -120,6 +123,7 @@ export default function MainNavigation({
                 background: token.colorBgElevated,
                 border: 'none',
                 color: token.colorText,
+                boxShadow: '0px 0px 3px 3px rgba(0,0,0,0.06)',
               }}
             />
           </Badge>
@@ -132,6 +136,7 @@ export default function MainNavigation({
                 background: token.colorBgElevated,
                 border: 'none',
                 color: token.colorText,
+                boxShadow: '0px 0px 3px 3px rgba(0,0,0,0.06)',
               }}
             />
           </Badge>
@@ -143,8 +148,10 @@ export default function MainNavigation({
               background: token.colorBgElevated,
               border: 'none',
               color: token.colorText,
+              boxShadow: '0px 0px 3px 3px rgba(0,0,0,0.06)',
             }}
           />
+
           <Dropdown menu={{ items }} trigger={['click']}>
             <Space>
               <Avatar

@@ -1,10 +1,12 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { sidebarData } from './sidebarData';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, theme } from 'antd';
+import logoPng from '../../Pages/UsersPage/Logo.PNG';
 
 const { Sider } = Layout;
 
-export default function Sidebar({ collapsed }) {
+export default function Sidebar({ collapsed, darkMode }) {
+  const token = theme.useToken();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,20 +24,43 @@ export default function Sidebar({ collapsed }) {
         collapsed={collapsed}
         width={250}
         style={{
-          backgroundColor: 'white',
+          backgroundColor: darkMode ? '#000000' : '#ffffff',
           height: 'auto',
+          overflow: 'auto',
+          borderRight: `1px solid ${token.colorBorderSecondary}`,
           fontWeight: 500,
         }}
       >
-        <div className='demo-logo-vertical' />
+        <div
+          className='demo-logo-vertical'
+          style={{
+            height: 64,
+            justifyContent: 'center',
+            alignItems: 'center',
+            display: 'flex',
+          }}
+        >
+          <img
+            style={{
+              height: 64,
+              width: 150,
+            }}
+            src={logoPng}
+            alt='skLogo'
+          />
+        </div>
         <Menu
-          theme='light'
           mode='inline'
           selectedKeys={[location.pathname]}
           defaultOpenKeys={openKeys}
-          defaultSelectedKeys={openKeys}
           items={sidebarData}
           onClick={({ key }) => navigate(key)}
+          style={{
+            height: '132vh',
+            backgroundColor: token.colorBgContainer,
+            color: token.colorText,
+            borderRadius: 10,
+          }}
         />
       </Sider>
     </>

@@ -16,7 +16,7 @@ export default function RootLayout() {
         }}
       >
         <Layout>
-          <Sidebar collapsed={collapsed} />
+          <Sidebar darkMode={darkMode} collapsed={collapsed} />
           <Layout>
             <MainNavigation
               darkMode={darkMode}
