@@ -1,7 +1,7 @@
 .recent-card {
-  background: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 30px;
   max-width: 500px;
   min-height: 340px;
@@ -13,10 +13,11 @@
 
 .recent-title {
   font-size: 16px;
-  margin: 0px;
+  margin-top: 0;
+  margin-bottom: 6px;
 }
 
 .recent-chartWrap {
   width: 100%;
-  height: auto;
+  height: 340;
 }

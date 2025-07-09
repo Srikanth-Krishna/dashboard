@@ -11,7 +11,7 @@ export default function TopCountriesItem({
     <div className='item-container'>
       <img src={image} alt={country} />
       <div className='item-body'>
-        <a href='#'>{country}</a>
+        <p>{country}</p>
         <i className={trend === 'up' ? 'up' : 'down'}>
           {trend === 'up' ? <IoIosTrendingUp /> : <IoIosTrendingDown />}
         </i>

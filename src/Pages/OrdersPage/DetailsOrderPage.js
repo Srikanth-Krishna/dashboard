@@ -56,7 +56,6 @@ const OrderDetailPage = () => {
                 key={index}
                 style={{
                   marginBottom: 12,
-                  background: '#f9fcff',
                   borderRadius: 8,
                 }}
                 bodyStyle={{

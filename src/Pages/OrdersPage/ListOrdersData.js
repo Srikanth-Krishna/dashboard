@@ -105,14 +105,7 @@ export const columns = [
       if (status === 'Success') {
         return <Tag color='green'>Success</Tag>;
       } else if (status === 'Cancelled') {
-        return (
-          <Tag
-            color='red'
-            style={{ backgroundColor: '#ffe8e6', color: '#ff4d4f' }}
-          >
-            Cancelled
-          </Tag>
-        );
+        return <Tag color='red'>Cancelled</Tag>;
       } else {
         return <Tag>Pending</Tag>;
       }

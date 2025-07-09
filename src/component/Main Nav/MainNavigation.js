@@ -153,19 +153,26 @@ export default function MainNavigation({
           />
 
           <Dropdown menu={{ items }} trigger={['click']}>
-            <Space>
+            <Space style={{ cursor: 'pointer' }}>
               <Avatar
-                src='https://randomuser.me/api/portraits/women/65.jpg'
+                src='https://randomuser.me/api/portraits/men/62.jpg'
                 size='large'
               />
               <div style={{ lineHeight: 0 }}>
                 <Text
                   strong
-                  style={{ display: 'block', color: token.colorText }}
+                  style={{
+                    display: 'block',
+                    color: token.colorText,
+                    cursor: 'pointer',
+                  }}
                 >
                   Srikanth Krishna
                 </Text>
-                <Text type='secondary' style={{ fontSize: 12 }}>
+                <Text
+                  type='secondary'
+                  style={{ fontSize: 12, cursor: 'pointer' }}
+                >
                   Admin
                 </Text>
               </div>

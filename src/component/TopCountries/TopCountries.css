@@ -1,27 +1,27 @@
 .top-countries-container {
-  background: #fff;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   justify-content: space-between;
   min-width: 250px;
   min-height: 340px;
   border-radius: 12px;
-  padding: 20px;
+  /* padding: 20px; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin: 12px;
 }
 
 .top-countries-container h3 {
   font-size: 16px;
-  margin: 0px;
+  margin: '0 0 6px 0';
 }
 
 .country-analytics {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
   padding: 0;
 }
 

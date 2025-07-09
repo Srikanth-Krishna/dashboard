@@ -1,17 +1,17 @@
 .top-products__container {
-  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-radius: 12px;
-  padding: 20px;
+  padding: 0px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin: 12px;
 }
 
-.top-products__header h3 {
+h3 {
   font-size: 16px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 6px;
 }
 
 .top-products__body li {

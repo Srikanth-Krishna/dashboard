@@ -2,13 +2,13 @@ import React from 'react';
 import './TopProducts.css';
 import TopProductsItem from './TopProductsItem';
 import { topProductsData } from '../../data/data';
+import { Card } from 'antd';
 
 export default function TopProducts() {
   return (
-    <div className='top-products__container'>
-      <div className='top-products__header'>
-        <h3>Top Products</h3>
-      </div>
+    <Card className='top-products__container'>
+      <h3>Top Products</h3>
+
       <div className='top-products__body'>
         <ul>
           {topProductsData.map((product, index) => {
@@ -20,6 +20,6 @@ export default function TopProducts() {
           })}
         </ul>
       </div>
-    </div>
+    </Card>
   );
 }

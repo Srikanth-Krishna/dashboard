@@ -2,10 +2,11 @@ import { IoIosTrendingUp } from 'react-icons/io';
 import './TopCountries.css';
 import { topCountries } from '../../data/data';
 import TopCountriesItem from './TopCountriesItem';
+import { Card } from 'antd';
 
 export default function TopCountries() {
   return (
-    <div className='top-countries-container'>
+    <Card className='top-countries-container'>
       <h3>Top Countries By Sales</h3>
       <div className='country-analytics'>
         <h4>$37,802</h4>
@@ -30,6 +31,6 @@ export default function TopCountries() {
           })}
         </ul>
       </div>
-    </div>
+    </Card>
   );
 }

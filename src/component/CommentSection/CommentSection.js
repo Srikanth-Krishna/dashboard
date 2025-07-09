@@ -9,7 +9,12 @@ const ScrollableComments = () => {
     <Card
       title={<Title level={4}>New Comments</Title>}
       extra={<Button type='text'>•••</Button>}
-      style={{ height: '100%', borderRadius: 12, marginLeft: 12 }}
+      style={{
+        height: '100%',
+        borderRadius: 12,
+        marginLeft: 12,
+        marginRight: 12,
+      }}
     >
       <div
         style={{

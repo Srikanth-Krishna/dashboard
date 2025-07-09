@@ -24,7 +24,7 @@ export default function Sidebar({ collapsed, darkMode }) {
         collapsed={collapsed}
         width={250}
         style={{
-          backgroundColor: darkMode ? '#000000' : '#ffffff',
+          backgroundColor: darkMode ? '#141414' : '#ffffff',
           height: 'auto',
           overflow: 'auto',
           borderRight: `1px solid ${token.colorBorderSecondary}`,
@@ -56,10 +56,10 @@ export default function Sidebar({ collapsed, darkMode }) {
           items={sidebarData}
           onClick={({ key }) => navigate(key)}
           style={{
-            height: '132vh',
+            height: 'auto',
             backgroundColor: token.colorBgContainer,
             color: token.colorText,
-            borderRadius: 10,
+            borderRight: 0,
           }}
         />
       </Sider>

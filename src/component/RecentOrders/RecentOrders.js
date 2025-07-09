@@ -10,6 +10,7 @@ import {
   Legend,
 } from 'chart.js';
 import './RecentOrders.css';
+import { Card } from 'antd';
 
 ChartJS.register(
   LineElement,
@@ -78,12 +79,12 @@ function RecentOrders() {
   };
 
   return (
-    <div className='recent-card'>
+    <Card className='recent-card'>
       <h3 className='recent-title'>Recent Orders</h3>
       <div className='recent-chartWrap'>
-        <Line style={{ height: 'auto' }} data={data} options={options} />
+        <Line style={{ height: '220px' }} data={data} options={options} />
       </div>
-    </div>
+    </Card>
   );
 }
 

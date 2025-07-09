@@ -17,10 +17,9 @@
   gap: 40px;
 }
 
-.item-body a {
-  text-decoration: none;
+.item-body p {
+  margin: 0;
   width: 30px;
-  color: black;
 }
 
 .up {
